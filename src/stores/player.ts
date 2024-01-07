@@ -40,6 +40,7 @@ export const usePlayerStore = defineStore('player', () => {
     setTimeout(() => {
       audio.value?.play();
       isPlaying.value = Boolean(!audio.value?.paused);
+      setMediaSessionMetadata();
     }, 200);
   }
 
@@ -50,6 +51,7 @@ export const usePlayerStore = defineStore('player', () => {
     active.value = undefined;
     isPlaying.value = false;
     audio.value = undefined;
+    navigator.mediaSession.metadata = null;
     router.push({ name: 'home' });
   }
 
@@ -61,6 +63,7 @@ export const usePlayerStore = defineStore('player', () => {
       isPlaying.value = false;
       audio.value.pause();
     }
+    setMediaSessionMetadata();
   }
 
   function prevStation() {
@@ -103,6 +106,15 @@ export const usePlayerStore = defineStore('player', () => {
     navigator.mediaSession.setActionHandler('pause', () => playOrPause());
     navigator.mediaSession.setActionHandler('play', () => playOrPause());
   });
+
+  const setMediaSessionMetadata = () => {
+    if (!active.value) return;
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: active.value.title,
+      artist: active.value.description,
+      artwork: [{ src: active.value.cover, sizes: '96x96', type: 'image/jpeg' }]
+    });
+  };
 
   return {
     isPlaying,
