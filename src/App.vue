@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import MainHeader from './components/Header.vue';
-import MainFooter from './components/Footer.vue';
+import MainHeader from './components/MainHeader.vue';
+import MainFooter from './components/MainFooter.vue';
 import MainDescription from './components/MainDescription.vue';
 import FooterDescription from './components/FooterDescription.vue';
 import CategoryStations from './components/CategoryStations.vue';

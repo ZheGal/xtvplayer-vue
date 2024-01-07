@@ -1,13 +1,13 @@
 <template>
   <div class="controls">
-    <button class="switchBtn" @click="store.prevStation">
+    <button class="switchBtn" @click="store.prevStation" v-wave>
       <img src="/icon/prev.svg" />
     </button>
-    <button class="playBtn" @click="store.playOrPause">
+    <button class="playBtn" @click="store.playOrPause" v-wave>
       <img src="/icon/play.svg" v-if="!store.isPlaying" />
       <img src="/icon/pause.svg" v-if="store.isPlaying" />
     </button>
-    <button class="switchBtn" @click="store.nextStation">
+    <button class="switchBtn" @click="store.nextStation" v-wave>
       <img src="/icon/next.svg" />
     </button>
   </div>

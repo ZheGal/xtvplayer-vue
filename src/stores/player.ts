@@ -5,7 +5,7 @@ import type {
 } from '@/schemas/catalog.schema';
 import { catalog } from '@/static/catalog';
 import { defineStore } from 'pinia';
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 
 export const usePlayerStore = defineStore('player', () => {
   const isPlaying = ref<boolean>(false);
@@ -14,6 +14,11 @@ export const usePlayerStore = defineStore('player', () => {
   const stations = ref<(CatalogStation | CatalogStationVariants)[]>(catalog.stations);
   const audio = ref<HTMLAudioElement>();
   const volume = ref<number>(1);
+  const allStations = computed(() =>
+    stations.value
+      .map((station) => (station && 'stations' in station ? [...station.stations] : station))
+      .flat()
+  );
 
   function selectStation(station: CatalogStation) {
     stop();
@@ -36,9 +41,8 @@ export const usePlayerStore = defineStore('player', () => {
   }
 
   function stop() {
-    if (audio.value) {
+    if (audio.value && audio.value.played) {
       audio.value.pause();
-      audio.value.src = '';
     }
     active.value = undefined;
     isPlaying.value = false;
@@ -49,15 +53,28 @@ export const usePlayerStore = defineStore('player', () => {
     if (audio.value?.paused) {
       isPlaying.value = true;
       audio.value.play();
-    } else {
+    }
+    if (audio.value && audio.value.played) {
       isPlaying.value = false;
-      audio.value?.pause();
+      audio.value.pause();
     }
   }
 
-  function prevStation() {}
+  function prevStation() {
+    if (active.value) {
+      const currentIndex = allStations.value.indexOf(active.value);
+      const result = allStations.value[currentIndex - 1];
+      selectStation(result);
+    }
+  }
 
-  function nextStation() {}
+  function nextStation() {
+    if (active.value) {
+      const currentIndex = allStations.value.indexOf(active.value);
+      const result = allStations.value[currentIndex + 1];
+      selectStation(result);
+    }
+  }
 
   function changeVolume() {
     if (volume.value == 0) {
@@ -80,6 +97,7 @@ export const usePlayerStore = defineStore('player', () => {
     active,
     categories,
     stations,
+    allStations,
     volume,
     selectStation,
     play,

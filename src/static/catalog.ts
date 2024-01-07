@@ -111,49 +111,49 @@ export const catalog: Catalog = {
       category_id: 3,
       title: 'Буковинська хвиля. 100 FM',
       description: 'Ти в безпеці',
-      stream: '',
+      stream: 'https://100.cv.ua:8443/play',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/BukWave.png'
     },
     {
       category_id: 3,
       title: 'Радіо 10',
       description: 'Чути своїх',
-      stream: '',
+      stream: 'https://stream.chv.ua:8443/acc.mp3',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/Radio10CV.png'
     },
     {
       category_id: 3,
       title: 'Радіо C4',
       description: 'Заряджаємо на Перемогу',
-      stream: '',
+      stream: 'https://radio.c4.com.ua:8443/320',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioC4.png'
     },
     {
       category_id: 3,
       title: 'Радіо TVA FM',
       description: 'Налаштуйся на краще - краще для тебе!',
-      stream: '',
+      stream: 'https://online-radiotva.icecast-xtvmedia.pp.ua/128',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioTVAFM.png'
     },
     {
       category_id: 3,
       title: 'Радіо На своїй хвилі',
       description: 'Говорить Новодністровськ!',
-      stream: '',
+      stream: 'https://online-novodnistrovsk.pp.ua:8443/play128',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioNovodnistrovsk1.png'
     },
     {
       category_id: 4,
       title: 'Радіо Карантин',
       description: 'Слухай всюди!',
-      stream: '',
+      stream: 'https://stream.zeno.fm/0fwnvhuhdwzuv',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/radiokarantin.png'
     },
     {
       category_id: 4,
       title: 'Медленное радио',
       description: 'Зупинись. Послухай.',
-      stream: '',
+      stream: 'https://online.radiokarantin.com/2dc1tfa8tc9uv',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/medlennoe.png'
     },
     {
@@ -182,55 +182,55 @@ export const catalog: Catalog = {
       category_id: 4,
       title: 'URC Радіо',
       description: 'Progressive Ukrainian Radio in the US',
-      stream: '',
+      stream: 'https://streamer.radio.co/sdff2fd6a8/listen',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioURC.png'
     },
     {
       category_id: 4,
       title: 'Радіо Mad FM',
       description: 'Інтернет хвиля веселих людей',
-      stream: '',
+      stream: 'https://globalic.stream:1440/stream',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/MadFM.png'
     },
     {
       category_id: 4,
       title: 'Радіо Новий день 101,9 FM',
       description: 'Почни новий день - з гарного настрою!',
-      stream: '',
+      stream: 'https://stream.zeno.fm/5burvqocukruv',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/1019Kr.png'
     },
     {
       category_id: 5,
       title: "Радіо П'ятниця",
       description: 'За Перемогу!',
-      stream: '',
+      stream: 'https://cast.radiogroup.com.ua/radiopyatnica',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioPyatnica.png'
     },
     {
       category_id: 5,
       title: 'Lounge FM',
       description: 'Your Everyday Vacation',
-      stream: '',
+      stream: 'https://cast.radiogroup.com.ua/loungefm',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/LoungeFM.png'
     },
     {
       category_id: 5,
       title: 'Авторадіо Україна',
       description: 'Автомобільне радіо №1',
-      stream: '',
+      stream: 'https://cast.radiogroup.com.ua/avtoradio',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/AvtoRadio.png'
     },
     {
       category_id: 5,
       title: 'NRJ Ukraine',
       description: 'HIT MUSIC ONLY!',
-      stream: '',
+      stream: 'https://cast.radiogroup.com.ua/nrj',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioNRJ.png'
     },
     {
       category_id: 5,
       title: 'Прямий FM',
-      stream: '',
+      stream: 'https://cast.radiogroup.com.ua/prmfm128',
       cover: 'https://play.xtvmedia.pp.ua/public/common/logos/PrmFM.png'
     }
   ]

@@ -3,14 +3,7 @@
     <div class="title">{{ category.description }}</div>
     <div class="stations">
       <template v-for="(station, index) in stations" :key="`stations_${index}`">
-        <div
-          class="station"
-          :alt="station.title"
-          :title="station.title"
-          @click="() => store.selectStation(station)"
-        >
-          <img :src="station.cover" :alt="station.title" :title="station.title" />
-        </div>
+        <station-item :station="station" />
       </template>
     </div>
   </div>
@@ -18,6 +11,7 @@
 
 <script setup lang="ts">
 import { CatalogCategory } from '@/schemas/catalog.schema';
+import StationItem from './StationItem.vue';
 import { computed } from 'vue';
 import { usePlayerStore } from '../stores/player';
 

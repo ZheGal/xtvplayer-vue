@@ -19,7 +19,7 @@
 import { usePlayerStore } from '../stores/player';
 const store = usePlayerStore();
 
-const formatTooltip = (val: number) => Math.floor(val * 100);
+const formatTooltip = (val: number) => (val < 0.01 ? '0' : Math.floor(val * 100));
 </script>
 
 <style lang="scss" scoped>
