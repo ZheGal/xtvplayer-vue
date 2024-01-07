@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { CatalogCategory } from '@/schemas/catalog.schema';
+import type { CatalogCategory } from '@/schemas/catalog.schema';
 import StationItem from './StationItem.vue';
 import { computed } from 'vue';
 import { usePlayerStore } from '../stores/player';
