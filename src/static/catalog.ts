@@ -34,7 +34,7 @@ export const catalog: Catalog = {
       title: 'XTV Media. Єдині новини',
       description: 'Разом ми сильні',
       stream: 'https://icecast.xtvmedia.pp.ua/XTV_NewsRadio.mp3',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/XTVRadioNews.png',
+      cover: '/images/XTVRadioNews.png',
       alias: 'XTVRadioNews'
     },
     {
@@ -48,7 +48,7 @@ export const catalog: Catalog = {
           title: 'Радіо Ванда FM Україна',
           description: 'Радіо чарівного настрою',
           stream: 'https://icecast.xtvmedia.pp.ua/radiowandafm_hq.mp3',
-          cover: 'https://play.xtvmedia.pp.ua/public/common/logos/wandafm.png',
+          cover: '/images/wandafm.png',
           alias: 'WandaFM-air'
         },
         {
@@ -56,7 +56,7 @@ export const catalog: Catalog = {
           title: 'Ванда FM Exclusive. Нова історія',
           description: 'Найкращі моменти з проєкту',
           stream: 'https://icecast.xtvmedia.pp.ua/radiowandafm_Exclusive.mp3',
-          cover: 'https://play.xtvmedia.pp.ua/public/common/logos/wandafm_exclusive.png',
+          cover: '/images/wandafm_exclusive.png',
           alias: 'WandaFM-exclusive'
         },
         {
@@ -64,7 +64,7 @@ export const catalog: Catalog = {
           title: 'Радіо Ванда FM #UKRNEWHITS',
           description: 'Нові українські хіти',
           stream: 'https://icecast.xtvmedia.pp.ua/radiowandafm_NEWUKRHITS.mp3',
-          cover: 'https://play.xtvmedia.pp.ua/public/common/logos/wandafm_ukrnewhits.png',
+          cover: '/images/wandafm_ukrnewhits.png',
           alias: 'WandaFM-ukrnewhits'
         },
         {
@@ -72,18 +72,18 @@ export const catalog: Catalog = {
           title: 'Радіо Ванда FM Top Hits',
           description: 'Тільки найновіші топ-хіти',
           stream: 'https://icecast.xtvmedia.pp.ua/radiowandafm_TopHits.mp3',
-          cover: 'https://play.xtvmedia.pp.ua/public/common/logos/wandafm_tophits.png',
+          cover: '/images/wandafm_tophits.png',
           alias: 'WandaFM-tophits'
         }
       ],
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/wandafm.png'
+      cover: '/images/wandafm.png'
     },
     {
       category_id: 2,
       title: 'Радіо Ванда FM 2',
       description: 'Неформату теж місце на радіо!',
       stream: 'https://icecast.xtvmedia.pp.ua/WandaFM2.mp3',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/WandaFM2.png',
+      cover: '/images/WandaFM2.png',
       alias: 'WandaFM2'
     },
     {
@@ -91,7 +91,7 @@ export const catalog: Catalog = {
       title: 'Радіо Melodeon',
       description: 'Золотий фонд золотих хітів',
       stream: 'https://icecast.xtvmedia.pp.ua/melodeon.mp3',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioMelodeon.png',
+      cover: '/images/RadioMelodeon.png',
       alias: 'Melodeon'
     },
     {
@@ -99,7 +99,7 @@ export const catalog: Catalog = {
       title: 'Радіо Золота Епоха',
       description: 'Золота класика',
       stream: 'https://icecast.xtvmedia.pp.ua/RadioZolotaEpokha.mp3',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioZolotaEpokha.png',
+      cover: '/images/RadioZolotaEpokha.png',
       alias: 'RadioZolotaEpokha'
     },
     {
@@ -107,7 +107,7 @@ export const catalog: Catalog = {
       title: 'Радіо Tutti',
       description: 'Радіо шедевральної музики',
       stream: 'https://icecast.xtvmedia.pp.ua/RadioTutti.mp3',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioTutti.png',
+      cover: '/images/RadioTutti.png',
       alias: 'RadioTutti'
     },
     {
@@ -115,7 +115,7 @@ export const catalog: Catalog = {
       title: 'Українське народне радіо',
       description: 'Українське - то своє!',
       stream: 'https://icecast.xtvmedia.pp.ua/UKRNR.mp3',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/UKRNR_v2.png',
+      cover: '/images/UKRNR_v2.png',
       alias: 'UKRNR'
     },
     {
@@ -123,7 +123,7 @@ export const catalog: Catalog = {
       title: 'Буковинська хвиля. 100 FM',
       description: 'Ти в безпеці',
       stream: 'https://100.cv.ua:8443/play',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/BukWave.png',
+      cover: '/images/BukWave.png',
       alias: 'BukWave'
     },
     {
@@ -131,7 +131,7 @@ export const catalog: Catalog = {
       title: 'Радіо 10',
       description: 'Чути своїх',
       stream: 'https://stream.chv.ua:8443/acc.mp3',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/Radio10CV.png',
+      cover: '/images/Radio10CV.png',
       alias: 'Radio10'
     },
     {
@@ -139,7 +139,7 @@ export const catalog: Catalog = {
       title: 'Радіо C4',
       description: 'Заряджаємо на Перемогу',
       stream: 'https://radio.c4.com.ua:8443/320',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioC4.png',
+      cover: '/images/RadioC4.png',
       alias: 'RadioC4'
     },
     {
@@ -147,7 +147,7 @@ export const catalog: Catalog = {
       title: 'Радіо TVA FM',
       description: 'Налаштуйся на краще - краще для тебе!',
       stream: 'https://online-radiotva.icecast-xtvmedia.pp.ua/128',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioTVAFM.png',
+      cover: '/images/RadioTVAFM.png',
       alias: 'RadioTVA'
     },
     {
@@ -155,7 +155,7 @@ export const catalog: Catalog = {
       title: 'Радіо На своїй хвилі',
       description: 'Говорить Новодністровськ!',
       stream: 'https://online-novodnistrovsk.pp.ua:8443/play128',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioNovodnistrovsk1.png',
+      cover: '/images/RadioNovodnistrovsk1.png',
       alias: 'RadioNovodnistrovsk'
     },
     {
@@ -163,7 +163,7 @@ export const catalog: Catalog = {
       title: 'Радіо Карантин',
       description: 'Слухай всюди!',
       stream: 'https://stream.zeno.fm/0fwnvhuhdwzuv',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/radiokarantin.png',
+      cover: '/images/radiokarantin.png',
       alias: 'RadioKarantin'
     },
     {
@@ -171,7 +171,7 @@ export const catalog: Catalog = {
       title: 'Медленное радио',
       description: 'Зупинись. Послухай.',
       stream: 'https://online.radiokarantin.com/2dc1tfa8tc9uv',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/medlennoe.png',
+      cover: '/images/medlennoe.png',
       alias: 'MedlennoeRadio'
     },
     {
@@ -185,7 +185,7 @@ export const catalog: Catalog = {
           title: 'KMusic Radio',
           description: 'Радіо твоєї насолоди',
           stream: 'https://stream.zeno.fm/z9x8zy7747zuv',
-          cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioKMusic.png',
+          cover: '/images/RadioKMusic.png',
           alias: 'KMusicRadio-air'
         },
         {
@@ -193,18 +193,18 @@ export const catalog: Catalog = {
           title: 'KMusic Radio. Мегахіт',
           description: 'Радіо твоєї насолоди',
           stream: 'https://stream.zeno.fm/jkatjk36u8zvv',
-          cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioKMusic_megahit.png',
+          cover: '/images/RadioKMusic_megahit.png',
           alias: 'KMusicRadio-megahit'
         }
       ],
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioKMusic.png'
+      cover: '/images/RadioKMusic.png'
     },
     {
       category_id: 4,
       title: 'URC Радіо',
       description: 'Progressive Ukrainian Radio in the US',
       stream: 'https://streamer.radio.co/sdff2fd6a8/listen',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioURC.png',
+      cover: '/images/RadioURC.png',
       alias: 'URCRadio'
     },
     {
@@ -212,7 +212,7 @@ export const catalog: Catalog = {
       title: 'Радіо Mad FM',
       description: 'Інтернет хвиля веселих людей',
       stream: 'https://globalic.stream:1440/stream',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/MadFM.png',
+      cover: '/images/MadFM.png',
       alias: 'MadFM'
     },
     {
@@ -220,7 +220,7 @@ export const catalog: Catalog = {
       title: 'Радіо Новий день 101,9 FM',
       description: 'Почни новий день - з гарного настрою!',
       stream: 'https://stream.zeno.fm/5burvqocukruv',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/1019Kr.png',
+      cover: '/images/1019Kr.png',
       alias: 'NewDay1019FM'
     },
     {
@@ -228,7 +228,7 @@ export const catalog: Catalog = {
       title: "Радіо П'ятниця",
       description: 'За Перемогу!',
       stream: 'https://cast.radiogroup.com.ua/radiopyatnica',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioPyatnica.png',
+      cover: '/images/RadioPyatnica.png',
       alias: 'RadioPyatnica'
     },
     {
@@ -236,7 +236,7 @@ export const catalog: Catalog = {
       title: 'Lounge FM',
       description: 'Your Everyday Vacation',
       stream: 'https://cast.radiogroup.com.ua/loungefm',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/LoungeFM.png',
+      cover: '/images/LoungeFM.png',
       alias: 'LoungeFM'
     },
     {
@@ -244,7 +244,7 @@ export const catalog: Catalog = {
       title: 'Авторадіо Україна',
       description: 'Автомобільне радіо №1',
       stream: 'https://cast.radiogroup.com.ua/avtoradio',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/AvtoRadio.png',
+      cover: '/images/AvtoRadio.png',
       alias: 'AvtoRadio'
     },
     {
@@ -252,14 +252,14 @@ export const catalog: Catalog = {
       title: 'NRJ Ukraine',
       description: 'HIT MUSIC ONLY!',
       stream: 'https://cast.radiogroup.com.ua/nrj',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/RadioNRJ.png',
+      cover: '/images/RadioNRJ.png',
       alias: 'NRJ'
     },
     {
       category_id: 5,
       title: 'Прямий FM',
       stream: 'https://cast.radiogroup.com.ua/prmfm128',
-      cover: 'https://play.xtvmedia.pp.ua/public/common/logos/PrmFM.png',
+      cover: '/images/PrmFM.png',
       alias: 'PrmFM'
     }
   ]
