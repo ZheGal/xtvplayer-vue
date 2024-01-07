@@ -100,6 +100,8 @@ export const usePlayerStore = defineStore('player', () => {
 
     navigator.mediaSession.setActionHandler('previoustrack', () => prevStation());
     navigator.mediaSession.setActionHandler('nexttrack', () => nextStation());
+    navigator.mediaSession.setActionHandler('pause', () => playOrPause());
+    navigator.mediaSession.setActionHandler('play', () => playOrPause());
   });
 
   return {
