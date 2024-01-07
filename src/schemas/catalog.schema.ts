@@ -15,6 +15,7 @@ export interface CatalogStation {
   description?: string;
   stream: string;
   cover: string;
+  alias: string;
 }
 
 export interface CatalogStationVariants {
@@ -23,4 +24,5 @@ export interface CatalogStationVariants {
   description: string;
   stations: CatalogStation[];
   cover: string;
+  alias: string;
 }

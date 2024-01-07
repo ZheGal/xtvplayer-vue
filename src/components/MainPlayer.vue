@@ -1,13 +1,15 @@
 <template>
-  <transition name="player">
-    <div class="player" v-if="store.active">
-      <div class="player-container">
-        <player-station :station="store.active" />
-        <player-controls />
-        <player-volume />
+  <teleport to="body">
+    <transition name="player">
+      <div class="player" v-if="store.active">
+        <div class="player-container">
+          <player-station />
+          <player-controls />
+          <player-volume />
+        </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </teleport>
 </template>
 
 <script setup lang="ts">

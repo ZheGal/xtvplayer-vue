@@ -6,6 +6,7 @@ import type {
 import { catalog } from '@/static/catalog';
 import { defineStore } from 'pinia';
 import { computed, onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 export const usePlayerStore = defineStore('player', () => {
   const isPlaying = ref<boolean>(false);
@@ -14,6 +15,7 @@ export const usePlayerStore = defineStore('player', () => {
   const stations = ref<(CatalogStation | CatalogStationVariants)[]>(catalog.stations);
   const audio = ref<HTMLAudioElement>();
   const volume = ref<number>(1);
+  const router = useRouter();
   const allStations = computed(() =>
     stations.value
       .map((station) => (station && 'stations' in station ? [...station.stations] : station))
@@ -24,6 +26,7 @@ export const usePlayerStore = defineStore('player', () => {
     stop();
     active.value = station;
     play();
+    router.push({ name: 'station', params: { alias: active.value.alias } });
   }
 
   function play() {
@@ -35,8 +38,8 @@ export const usePlayerStore = defineStore('player', () => {
     audio.value.volume = volume.value;
 
     setTimeout(() => {
-      isPlaying.value = true;
       audio.value?.play();
+      isPlaying.value = Boolean(!audio.value?.paused);
     }, 200);
   }
 
@@ -47,12 +50,12 @@ export const usePlayerStore = defineStore('player', () => {
     active.value = undefined;
     isPlaying.value = false;
     audio.value = undefined;
+    router.push({ name: 'home' });
   }
 
   function playOrPause() {
-    if (audio.value?.paused) {
-      isPlaying.value = true;
-      audio.value.play();
+    if (audio.value?.paused && active.value) {
+      selectStation(active.value);
     }
     if (audio.value && audio.value.played) {
       isPlaying.value = false;
@@ -63,7 +66,9 @@ export const usePlayerStore = defineStore('player', () => {
   function prevStation() {
     if (active.value) {
       const currentIndex = allStations.value.indexOf(active.value);
-      const result = allStations.value[currentIndex - 1];
+      const find = allStations.value[currentIndex - 1];
+      const last = allStations.value[allStations.value.length - 1];
+      const result = find ?? last;
       selectStation(result);
     }
   }
@@ -71,7 +76,9 @@ export const usePlayerStore = defineStore('player', () => {
   function nextStation() {
     if (active.value) {
       const currentIndex = allStations.value.indexOf(active.value);
-      const result = allStations.value[currentIndex + 1];
+      const find = allStations.value[currentIndex + 1];
+      const first = allStations.value[0];
+      const result = find ?? first;
       selectStation(result);
     }
   }

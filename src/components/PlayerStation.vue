@@ -1,21 +1,19 @@
 <template>
-  <div class="station">
+  <div class="station" v-if="store.active">
     <div class="logo">
-      <img :src="station.cover" :alt="station.title" :title="station.title" />
+      <img :src="store.active.cover" :alt="store.active.title" :title="store.active.title" />
     </div>
     <div class="info">
-      <div class="title">{{ station.title }}</div>
-      <div class="description">{{ station.description }}</div>
+      <div class="title">{{ store.active.title }}</div>
+      <div class="description">{{ store.active.description }}</div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { CatalogStation } from '@/schemas/catalog.schema';
+import { usePlayerStore } from '../stores/player';
 
-defineProps<{
-  station: CatalogStation;
-}>();
+const store = usePlayerStore();
 </script>
 
 <style lang="scss" scoped>
