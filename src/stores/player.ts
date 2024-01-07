@@ -97,6 +97,9 @@ export const usePlayerStore = defineStore('player', () => {
     const localVolume = window.localStorage.getItem('volume');
     const newVolume = Number(localVolume ?? 1);
     volume.value = newVolume;
+
+    navigator.mediaSession.setActionHandler('previoustrack', () => prevStation());
+    navigator.mediaSession.setActionHandler('nexttrack', () => nextStation());
   });
 
   return {
