@@ -7,6 +7,6 @@
 
 <style lang="scss" scoped>
 .footer {
-  @apply text-center p-4;
+  @apply text-center p-4 text-base max-md:text-xs;
 }
 </style>

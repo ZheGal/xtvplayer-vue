@@ -27,12 +27,13 @@ const stations = computed(() =>
 <style lang="scss" scoped>
 .category {
   .title {
-    @apply text-center p-2;
+    @apply text-center p-2 md:text-base;
+    @apply max-md:text-xs max-md:p-4;
   }
   .stations {
     @apply bg-white flex text-black flex-wrap justify-center p-4 gap-4;
     .station {
-      @apply aspect-square w-[150px] cursor-pointer;
+      @apply aspect-square md:w-[150px] max-md:w-[90px] cursor-pointer;
       > img {
         @apply pointer-events-none select-none;
       }
