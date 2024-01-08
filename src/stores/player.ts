@@ -47,6 +47,8 @@ export const usePlayerStore = defineStore('player', () => {
   function stop() {
     if (audio.value && audio.value.played) {
       audio.value.pause();
+      audio.value.removeAttribute('src');
+      audio.value.load();
     }
     active.value = undefined;
     isPlaying.value = false;
