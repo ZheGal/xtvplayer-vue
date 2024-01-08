@@ -21,7 +21,7 @@ const store = usePlayerStore();
   @apply flex flex-row text-white h-full p-3 gap-4 items-center;
 
   .info {
-    @apply flex flex-col justify-center;
+    @apply flex flex-col justify-center text-nowrap;
     .title {
       @apply font-bold max-md:text-xs;
     }
@@ -32,7 +32,7 @@ const store = usePlayerStore();
 
   .logo {
     @apply rounded-lg overflow-hidden md:w-[70px] md:h-[70px];
-    @apply max-md:w-[40px];
+    @apply max-md:w-[40px] max-md:h-[40px] max-md:min-w-[40px] max-md:min-h-[40px];
     > img {
       @apply aspect-square h-full pointer-events-none select-none;
     }
