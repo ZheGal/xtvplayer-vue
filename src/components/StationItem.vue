@@ -20,7 +20,8 @@
       trigger="click"
       :title="station.title"
       virtual-triggering
-      width="500px"
+      :width="550"
+      popover-class="popover"
     >
       <inner-stations :stations="station" />
     </el-popover>
@@ -79,6 +80,9 @@ function handleClick() {
     &-leave-to {
       @apply opacity-0;
     }
+  }
+  .popover {
+    @apply w-full max-w-[500px];
   }
 }
 </style>

@@ -26,7 +26,7 @@ defineProps<{
 .stations {
   @apply flex flex-row flex-wrap gap-4 items-center py-4;
   .station {
-    @apply md:w-[100px];
+    @apply md:w-[100px] max-md:w-[70px];
   }
 }
 </style>

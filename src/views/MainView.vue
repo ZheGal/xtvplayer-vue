@@ -52,7 +52,7 @@ onMounted(() => {
 
 <style>
 body {
-  @apply font-fira bg-[#0e5b53];
+  @apply font-fira bg-[#0e5b53] overflow-x-hidden max-w-full;
 }
 </style>
 
