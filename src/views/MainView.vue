@@ -59,7 +59,7 @@ body {
 <style lang="scss" scoped>
 .layout {
   @apply flex flex-col justify-center items-center;
-  @apply w-full min-h-screen text-white pb-[100px];
+  @apply w-full min-h-screen text-white md:pb-[100px] max-md:pb-[70px];
   .inner {
     @apply w-full max-w-[850px] flex-1;
   }

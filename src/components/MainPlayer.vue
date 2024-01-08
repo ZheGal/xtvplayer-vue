@@ -23,9 +23,10 @@ const store = usePlayerStore();
 
 <style lang="scss" scoped>
 .player {
-  @apply fixed bottom-0 bg-black/70 w-full h-[100px] backdrop-blur-sm;
+  @apply fixed bottom-0 bg-black/70 w-full md:h-[100px];
   @apply shadow-2xl flex flex-col text-white;
   @apply rounded-t-2xl duration-500 select-none;
+  @apply max-md:h-[70px] backdrop-blur-sm;
 
   &-enter-active,
   &-leave-active {
@@ -38,10 +39,8 @@ const store = usePlayerStore();
   }
 
   .player-container {
-    @apply w-full h-full px-4 grid grid-cols-3;
-    .right {
-      //   @apply flex items-end justify-end;?
-    }
+    @apply w-full h-full px-4 grid md:grid-cols-3;
+    @apply max-md:grid-cols-2;
   }
 }
 </style>

@@ -25,6 +25,7 @@ const formatTooltip = (val: number) => (val < 0.01 ? '0' : Math.floor(val * 100)
 <style lang="scss" scoped>
 .volume {
   @apply flex flex-row items-center justify-end gap-4 px-4;
+  @apply max-md:hidden;
   &-icon {
     @apply w-[25px];
   }

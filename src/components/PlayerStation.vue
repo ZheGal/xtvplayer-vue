@@ -23,15 +23,16 @@ const store = usePlayerStore();
   .info {
     @apply flex flex-col justify-center;
     .title {
-      @apply font-bold;
+      @apply font-bold max-md:text-xs;
     }
     .description {
-      @apply text-xs;
+      @apply text-xs max-md:text-[10px];
     }
   }
 
   .logo {
-    @apply rounded-lg overflow-hidden w-[70px] h-[70px];
+    @apply rounded-lg overflow-hidden md:w-[70px] md:h-[70px];
+    @apply max-md:w-[40px];
     > img {
       @apply aspect-square h-full pointer-events-none select-none;
     }

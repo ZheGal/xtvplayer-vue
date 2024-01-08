@@ -21,19 +21,24 @@ const store = usePlayerStore();
 
 <style lang="scss" scoped>
 .controls {
-  @apply flex items-center justify-center gap-4;
+  @apply flex items-center md:justify-center gap-4;
+  @apply max-md:justify-end max-md:px-4;
   .playBtn {
-    @apply bg-white/90 aspect-square rounded-full h-[60px] w-[60px];
+    @apply bg-white/90 aspect-square rounded-full;
     @apply cursor-pointer duration-150 border p-3;
     @apply hover:shadow-inner active:scale-95;
+    @apply md:h-[60px] md:w-[60px];
+    @apply max-md:w-[40px] max-md:h-[40px];
     > img {
       @apply pointer-events-none select-none;
     }
   }
   .switchBtn {
-    @apply bg-white/90 aspect-square rounded-full h-[40px] w-[40px];
+    @apply bg-white/90 aspect-square rounded-full;
     @apply cursor-pointer duration-150 border p-1;
     @apply hover:shadow-inner active:scale-90;
+    @apply md:h-[40px] md:w-[40px];
+    @apply max-md:w-[30px] max-md:h-[30px];
     > img {
       @apply pointer-events-none select-none;
     }
