@@ -112,26 +112,9 @@ export const usePlayerStore = defineStore('player', () => {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: active.value.title,
       artist: active.value.description,
-      album: active.value.title,
-      artwork: getArtwork(active.value.cover)
+      album: active.value.title
     });
   };
-
-  function getArtwork(artwork: string): MediaImage[] {
-    const path = artwork.split('.').slice(0, -1).join('.');
-    return [
-      {
-        src: `${path}_96x96.jpg`,
-        sizes: '96x96',
-        type: 'image/jpeg'
-      },
-      {
-        src: `${path}_128x128.jpg`,
-        sizes: '128x128',
-        type: 'image/jpeg'
-      }
-    ];
-  }
 
   return {
     isPlaying,
